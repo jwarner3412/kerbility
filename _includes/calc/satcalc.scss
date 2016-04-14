@@ -1,0 +1,42 @@
+@import "bourbon/bourbon";
+@import "base/variables";
+
+
+.calcWrap {
+  .formInput {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 $small-spacing;
+  }
+
+  .perInputs {
+    max-width: $base-spacing * 4;
+  }
+
+  #precInput,
+  #satCount {
+    max-width: $base-spacing * 4;
+    text-align: center;
+  }
+
+  #targAltInput {
+    max-width: $base-spacing * 6;
+  }
+  #helpWrap {
+    display: none;
+  }
+  button {
+    margin: 0 $small-spacing;
+  }
+
+
+
+
+
+
+
+
+
+
+
+}

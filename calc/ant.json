@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Stayputnik",
+    "type": "Probe",
+    "angle": 360,
+    "rangeM": 3000,
+    "charge": 0.028,
+    "desc": "Arms length"
+  },
+  {
+    "name": "Reflectron DP-10",
+    "type": "Omni",
+    "angle": 360,
+    "rangeM": 500000,
+    "charge": 0.01,
+    "desc": "Any line of sight to KSC Mission Control, if below 150 km altitude"
+  },
+  {
+    "name": "Communotron 16",
+    "type": "Omni",
+    "angle": 360,
+    "rangeM": 2500000,
+    "charge": 0.13,
+    "desc": "Low Kerbin Orbit"
+  },
+  {
+    "name": "CommTech EXP-VR-2T",
+    "type": "Omni",
+    "angle": 360,
+    "rangeM": 3000000,
+    "charge": 0.18,
+    "desc": "Low Kerbin Orbit"
+  },
+  {
+    "name": "Communotron 32",
+    "type": "Omni",
+    "angle": 360,
+    "rangeM": 5000000,
+    "charge": 0.6,
+    "desc": "Near-Kerbin space, synchronous orbit"
+  },
+  {
+    "name": "Comms DTS-M1",
+    "type": "Dish",
+    "angle": 45,
+    "rangeM": 50000000,
+    "charge": 0.82,
+    "desc": "Minmus"
+  },
+  {
+    "name": "Reflectron KR-7",
+    "type": "Dish",
+    "angle": 25,
+    "rangeM": 90000000,
+    "charge": 0.82,
+    "desc": "Kerbin sphere of influence"
+  },
+  {
+    "name": "Communotron 88-88",
+    "type": "Dish",
+    "angle": 0.06,
+    "rangeM": 40000000000,
+    "charge": 0.93,
+    "desc": "Moho, Eve, Duna (all times), Dres (same side of sun only)"
+  },
+  {
+    "name": "Reflectron KR-14",
+    "type": "Dish",
+    "angle": 0.04,
+    "rangeM": 60000000000,
+    "charge": 0.93,
+    "desc": "Dres (all times), Jool (same side of sun only), Eeloo (periapsis and same side of sun only)"
+  },
+  {
+    "name": "CommTech-1",
+    "type": "Dish",
+    "angle": 0.006,
+    "rangeM": 350000000000,
+    "charge": 2.6,
+    "desc": "Eeloo (all times)"
+  },
+  {
+    "name": "Reflectron GX-128",
+    "type": "Dish",
+    "angle": 0.005,
+    "rangeM": 400000000000,
+    "charge": 2.8,
+    "desc": "Eeloo (all times)"
+  }
+]

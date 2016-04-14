@@ -1,0 +1,93 @@
+<div class="calcWrap">
+  <style type="text/css">
+    {% capture include_to_scssify %}
+      {% include calc/satcalc.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+  </style>
+  <h1>saTellIte-NetwOrk SpacEr-oUt-eR</h1>
+  <form action="">
+    <div class="formInput">
+      <label for="solSelect">System
+        <select name="solSelect" id="solSelect"></select>
+      </label>
+      <label for="bodySelect">Body
+        <select name="bodySelect" id="bodySelect"></select>
+      </label>
+    </div>
+
+    <div class="formInput">
+      <label for="precInput">Precision
+        <input type="number" id="precInput" name="precInput" value="0.01">
+      </label>
+
+      <label for="satCount"># of Sats
+        <input type="number" id="satCount" name="satCount" value="3" min="2">
+      </label>
+    </div>
+
+    <div class="formInput">
+      <label for="targBySelect">Target By:
+        <select name="targBySelect" id="targBySelect">
+          <option value="alt">Altitude</option>
+          <option value="per">Period</option>
+        </select>
+      </label>
+
+      <label for="targAltInput">Circ (m):
+        <input type="number" id="targAltInput" name="targAltInput">
+      </label>
+    </div>
+    
+    <div class="formInput">
+      <label for="perDayInput">Days
+        <input type="number" name="perDayInput" class="perInputs" id="perDayInput">
+      </label>
+
+      <label for="perHourInput">Hours
+        <input type="number" name="perHourInput" class="perInputs" id="perHourInput">
+      </label>
+
+      <label for="perMinInput">Minutes
+        <input type="number" name="perMinInput" class="perInputs" id="perMinInput">
+      </label>
+
+      <label for="perSecInput">Seconds
+        <input type="number" name="perSecInput" class="perInputs" id="perSecInput">
+      </label>
+    </div>
+    <div class="formInput">
+      <button id="instructionButton">Instructions</button>
+      <button id="doMaths">Do Maths!</button>
+    </div>
+
+  <div id="helpWrap">
+    <ol>
+      <li>Select your solar system and body.</li>
+      <li>Enter how many satellites are in your launch bundle.</li>
+      <li>Enter a target altitude or orbital period for your deployed network. Default is minimum altitude/period.</li>
+      <ul>
+        <li>Protip: Geosync orbit has a period of 1 day (days are relative to body rotation).</li>
+      </ul>
+      <li>The results will display deployment orbit.</li>
+      <ol>
+        <li>Launch your bundle to the deployment orbit.</li>
+        <li>Each periapsis circularize 1 satellite.</li>
+        <li>Repeat until your out of satellites.</li>
+      </ol>
+      <li>Deorbit your junk.</li>
+    </ol>
+    <p>
+      Being accurate with your orbit time period is far more important than matching altitude exactly.
+      Make sure to compensate for decouplers and adjust your period back after each satelitte stage event.
+      Satellites should be within 0.05sec of desired orbit, use 'Ctrl' + translation thrusters. <br>
+      *Note: Placement precision near 0 will require a 0' inclination.
+    </p>
+    <div class="buttWrap">
+      <button id="helpClose">Close</button>
+    </div>
+  </div>
+
+  <div id="results"></div>
+  <script src="scripts/main.min.js"></script>
+</div>
