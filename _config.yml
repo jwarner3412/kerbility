@@ -6,15 +6,13 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Kerbility.com
-email: your-email@domain.com
+title: Kraken-Free Zone
+email: admin@kerbility.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/mysite" # the subpath of your site, e.g. /blog
+  An assortment of KSP calculation tools and usefull things including satellite
+  network calculator, and some kerboscript snippits.
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://kerbility.com" # the base hostname & protocol for your site
-twitter_username: jwarner87
 
 # Build settings
 markdown: kramdown
