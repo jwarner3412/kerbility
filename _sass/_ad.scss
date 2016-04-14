@@ -1,0 +1,13 @@
+.adwrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.ad {
+  height: 15em;
+  //background-color: black;
+  margin: 1em;
+  flex: 1;
+  min-width: 200px;
+  max-width: 320px;
+}
