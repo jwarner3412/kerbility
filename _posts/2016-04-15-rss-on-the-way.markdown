@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "RSS on the way! ...tomorrow"
-date:   2016-04-15 01:29:53 -0400
+title:  "RSS here... I think."
+date:   2016-04-16 08:35:48 -0400
 categories: jekyll update
 ---
-I'm nearly done with the gathering of body info, by tomorrow night RSS should
-be fully functional. Next up is antenna signal strength indicator under the
-results tab(data currently loads but isnt processed), then the rest of the solar
-systems ones by one. Planning on uploading a KoS script or 2 tomorrow as well.
-Thanks for stopping by any bugs, or even styling ideas drop me an email. I
-don't have a creative bone in my body. I'll gladly take your Kerbal art as
-well.
+So... the "Real Solar System" datafile is built, not super confident about it.
+Think the math might be off a smidge somewhere. Please test it outside of your
+normal save file. The time period section definitely seems wonky, so try to keep
+by altitude until I can work that out. Again, any bugs please shoot me an email.
 
-Oh and gonna try to figure out comments tomorrow.
+And the disclaimer once more:
+I don't play RSS (yet) so I HAVE NOT TESTED THE RSS MATHS.
+
+[Enjoy](/calc/)
