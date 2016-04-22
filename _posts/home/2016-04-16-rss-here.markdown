@@ -2,7 +2,7 @@
 layout: post
 title:  "RSS on the way! ...tomorrow"
 date:   2016-04-15 01:29:53 -0400
-categories: jekyll update
+categories: update
 ---
 I'm nearly done with the gathering of body info, by tomorrow night RSS should
 be fully functional. Next up is antenna signal strength indicator under the

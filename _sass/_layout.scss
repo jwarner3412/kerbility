@@ -8,6 +8,13 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
+    .site-title {
+      position: relative;
+    }
+    .tagline {
+      position: absolute;
+      top: 35px;
+    }
 }
 
 .site-title {

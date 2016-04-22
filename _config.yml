@@ -6,7 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Kraken-Free Zone
+title: "Kerbility"
+tagline: "not for your resume"
 email: admin@kerbility.com
 description: > # this means to ignore newlines until "baseurl:"
   An assortment of KSP calculation tools and usefull things including satellite

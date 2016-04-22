@@ -2,7 +2,7 @@
 layout: post
 title:  "RSS here... I think."
 date:   2016-04-16 08:35:48 -0400
-categories: jekyll update
+categories: update
 ---
 So... the "Real Solar System" datafile is built, not super confident about it.
 Think the math might be off a smidge somewhere. Please test it outside of your
