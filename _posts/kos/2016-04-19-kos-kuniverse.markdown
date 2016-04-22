@@ -3,7 +3,7 @@ layout: post
 title:  "Land your booster... And get to orbit!"
 date:   2016-04-20 01:29:53 -0400
 categories: kos
-published: false
+published: true
 ---
 Here marks my first KOS post: How to land your Falcon9 booster and complete your
 main objective.
@@ -55,24 +55,26 @@ all 7 flight conditions, and their 4 settings for each.
 
 Syntax for accessing these settings is as follows:
 
-<code>
+<pre>
 set kuniverse:defaultLoadDistance:flightCondition:setting to value.
-</code>
+</pre>
 
 Where condition would be "flying" or "landed" etc, setting would be "pack",
 "unload", etc, value would be the distance in meters.
 
 Now that we have the background information, onto making our return to default
 settings program. In KOS you can log strings to new files with the
-<code>log "content" to file.ks.</code> command. Using this method, we can make a
+<code>log "[content]" to [file].ks.</code> command. Using this method, we can make a
 query and log the results to another file. That would be done like so:
 
-<code>log "set kuniverse:defaultLoadDistance:flying:unload to "+kuniverse:defaultLoadDistance:flying:unload+"." to kun.ks.</code><code>
-log "SET KUNIVERSE:DEFAULTLOADDISTANCE:FLYING:LOAD TO "+KUNIVERSE:DEFAULTLOADDISTANCE:FLYING:LOAD+"." to kun.ks.
-</code><code>
-WAIT 0.001.
+<pre>
+log "set kuniverse:defaultLoadDistance:flying:unload to " + kuniverse:defaultLoadDistance:flying:unload + "." to kun.ks.
+log "SET KUNIVERSE:DEFAULTLOADDISTANCE:FLYING:LOAD TO " + KUNIVERSE:DEFAULTLOADDISTANCE:FLYING:LOAD + "." to kun.ks.
 log "wait 0.0001." to kun.ks.
-</code>
+WAIT 0.001.
+
 log "SET KUNIVERSE:DEFAULTLOADDISTANCE:FLYING:PACK TO "+KUNIVERSE:DEFAULTLOADDISTANCE:FLYING:PACK+"." to kun.ks.
 log "SET KUNIVERSE:DEFAULTLOADDISTANCE:FLYING:UNPACK TO "+KUNIVERSE:DEFAULTLOADDISTANCE:FLYING:UNPACK+"." to kun.ks.
+log "wait 0.0001." to kun.ks.
 WAIT 0.001.
+</pre>
