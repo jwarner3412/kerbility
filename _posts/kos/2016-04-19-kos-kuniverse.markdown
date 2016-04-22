@@ -3,7 +3,7 @@ layout: post
 title:  "Land your booster... And get to orbit!"
 date:   2016-04-20 01:29:53 -0400
 categories: kos
-published: true
+published: false
 ---
 Here marks my first KOS post: How to land your Falcon9 booster and complete your
 main objective.
