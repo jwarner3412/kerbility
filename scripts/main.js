@@ -11,3 +11,11 @@
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 ga('create', 'UA-76237224-1', 'auto');
 ga('send', 'pageview');
+
+var vglnk = { key: '9c1c9c3af2b6bbade7ed3a0281ffae18' };
+
+(function(d, t) {
+  var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+  s.src = '//cdn.viglink.com/api/vglnk.js';
+  var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+}(document, 'script'));
