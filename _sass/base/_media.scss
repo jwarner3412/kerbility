@@ -1,9 +1,21 @@
-figure {
-  margin: 0;
+/**
+ * Images
+ */
+ .photo {
+     width: 100%;
+     height: 40vh;
+     margin: 0 auto 20px;
+     box-shadow: 2px 3px 10px black;
+     background-position: center 30%;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+
+.drag-background {
+  background-image: url('/assets/img/background.jpg');
 }
 
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
+.heavy-twins {
+  background-image: url('/assets/img/f9heavytwins.jpg');
 }

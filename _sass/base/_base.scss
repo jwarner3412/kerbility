@@ -3,12 +3,25 @@
 // Copyright 2013-2015 thoughtbot, inc.
 // MIT License
 
+@import "normalize";
+
+//  original jekyll vars in here
 @import "variables";
 
+// @import "lists";
+// @import "typography";
 @import "buttons";
 @import "forms";
-//@import "layout";
-//@import "lists";
-@import "media";
 @import "tables";
-//@import "typography";
+
+// original jekyll layout here
+@import "layout";
+
+// picture stuff
+@import "media";
+
+// and jekyll base for the syntax dep
+@import "jekyll-base";
+
+// syntax highlighting
+@import "syntax-highlighting";
