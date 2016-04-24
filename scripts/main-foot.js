@@ -3,7 +3,7 @@ var dec_pid = 719128;
 var dec_bid = 1784823;
 
 // 5 sec timout inserts ads after pageload for google results
-$(setTimeout(function () {
+(function () {
 // // inserts ad css and any other non crucial stuff i can move
 //   $('head').append($(document.createElement('link')).attr({
 //     rel: 'stylesheet',
@@ -136,4 +136,4 @@ $(setTimeout(function () {
   })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
   ga('create', 'UA-76237224-1', 'auto');
   ga('send', 'pageview');
-}, 5000));
+})();
