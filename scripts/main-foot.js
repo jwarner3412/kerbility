@@ -12,16 +12,6 @@ window.fbAsyncInit = function() {
 };
 
 
-// 2.5 sec timeout for fb load
-$(setTimeout((function(d, s, id){
-   var js, fjs = d.getElementsByTagName(s)[0];
-   if (d.getElementById(id)) {return;}
-   js = d.createElement(s); js.id = id;
-   js.src = "//connect.facebook.net/en_US/sdk.js";
-   fjs.parentNode.insertBefore(js, fjs);
- }(document, 'script', 'facebook-jssdk')), 2500));
-
-
 // 5 sec timout inserts ads after pageload for google results
 $(setTimeout(function () {
 // // inserts ad css and any other non crucial stuff i can move
@@ -29,7 +19,6 @@ $(setTimeout(function () {
 //     rel: 'stylesheet',
 //     href: '/css/main.css'
 //   }));
-
 
 // constructor for ad infos
   var AdData = function(url, element, bool) {
@@ -44,44 +33,52 @@ $(setTimeout(function () {
   renderAd = function(binder) {
     if (!binder) {
       var binder = this;
-      console.log('binder falsey');
     }
 // heheehehehe
     document.write = function(adContent) {
       binder.element.append(adContent);
-      console.log(binder.element);
-      console.log(adContent);
     }
 
+    document.writeIn = function(adContent) {
+      binder.element.append(adContent);
+    }
 
     if (!binder.noGet) {
       binder.element.append($(document.createElement('script')).attr({
         type: 'text/javascript',
         src: binder.url
       }));
-      console.log(binder.element);
     } else {
       $.getScript(binder.url);
-      console.log('getScript' + binder);
     }
   }
 
 // bidvert nonsense placeholder loader
-  $('.bidvert-square').append($(document.createElement('script')).attr({
+  $('.bidvert-square1').append($(document.createElement('script')).attr({
     type: "text/javascript",
     src: "http://cdn.bidvertiser.com/bdvinj.js?pid=719128&bid=1784823",
   }));
 
-  var bidvertRuntime = new AdData(
-      'http://cdn.bidvertiser.com/bdvinj.js?pid=719128&bid=1784823',
-      $('.bidvert-square')
+  var bidvertRuntime1 = new AdData(
+      'http://cdn.bidvertiser.com/bdvinj.js?pid=719128&bid=1784827',
+      $('.bidvert-square1')
   );
 
-// yllix script
-  var yllixSquare = new AdData(
-      'http://yx-ads6.com/layer.php?section=General&pub=532544&ga=g&show=1&fp',
-      $('.yllix-square')
+  $('.bidvert-square2').append($(document.createElement('script')).attr({
+    type: "text/javascript",
+    src: "http://cdn.bidvertiser.com/bdvinj.js?pid=719128&bid=1784827",
+  }));
+
+  var bidvertRuntime2 = new AdData(
+      'http://cdn.bidvertiser.com/bdvinj.js?pid=719128&bid=1784823',
+      $('.bidvert-square2')
   );
+// yllix script
+  var yllixSquarePop = new AdData(
+    'http://yx-ads6.com/layer.php?section=General&pub=532544&ga=g&show=1&fp',
+    $('.ad-place2')
+  );
+
 
 // rev hits scripts
   var revhitsSquare1 = new AdData(
@@ -97,34 +94,38 @@ $(setTimeout(function () {
 
 // puts scripts where they go
   var blockAdList = [];
-  blockAdList.push(yllixSquare, bidvertRuntime, revhitsSquare1, revhitsSquare2);
+  blockAdList.push(
+    yllixSquarePop,
+    bidvertRuntime1,
+    revhitsSquare1,
+    revhitsSquare2,
+    bidvertRuntime2
+  );
+
   for (var i = 0; i < blockAdList.length; i++) {
-    console.log(blockAdList[i].element);
-    console.log('index' + i);
     renderAd(blockAdList[i]);
   }
 
-
 // yllix iframes
-  $('.yllix-square').append($(document.createElement('iframe')).attr({
-    src: "http://yx-ads6.com/banner_show.php?section=General&amp;pub=532544&amp;format=300x250&amp;ga=g",
-    frameborder: "0",
-    scrolling: "no",
-    width: "300",
-    height: "250",
-    marginwidth: "0",
-    marginheight: "0"
-  }));
-
-  $('.yllix-mobile').append($(document.createElement('iframe')).attr({
-    src: "http://yx-ads6.com/banner_show.php?section=General&amp;pub=532544&amp;format=300x50&amp;ga=g",
-    frameborder:"0",
-    scrolling: "no",
-    width: "100%",
-    height: "50",
-    marginwidth: "0",
-    marginheight: "0"
-  }));
+  // $('.yllix-square').append($(document.createElement('iframe')).attr({
+  //   src: "http://yx-ads6.com/banner_show.php?section=General&amp;pub=532544&amp;format=300x250&amp;ga=g",
+  //   frameborder: "0",
+  //   scrolling: "no",
+  //   width: "300",
+  //   height: "250",
+  //   marginwidth: "0",
+  //   marginheight: "0"
+  // }));
+  //
+  // $('.yllix-mobile').append($(document.createElement('iframe')).attr({
+  //   src: "http://yx-ads6.com/banner_show.php?section=General&amp;pub=532544&amp;format=300x50&amp;ga=g",
+  //   frameborder:"0",
+  //   scrolling: "no",
+  //   width: "100%",
+  //   height: "50",
+  //   marginwidth: "0",
+  //   marginheight: "0"
+  // }));
 
 
 // viglinks
@@ -151,4 +152,13 @@ $(setTimeout(function () {
   ga('create', 'UA-76237224-1', 'auto');
   ga('send', 'pageview');
 
-}, 5000));
+
+  // facebook comments
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'facebook-jssdk');
+}, 4000));
