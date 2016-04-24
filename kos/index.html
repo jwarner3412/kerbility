@@ -16,7 +16,7 @@ permalink: /kos/
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-        {{ post.excerpt }}
+        {{ post.excerpt | truncate: 300}}
       </li>
     {% endfor %}
   </ul>

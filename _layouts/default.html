@@ -4,21 +4,21 @@ layout: compress
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+  {% include boiler/head.html %}
 
   <body>
 
-    {% include header.html %}
+    {% include boiler/header.html %}
 
     <div class="page-content">
       <div class="wrapper">
         {{ content }}
       </div>
-      {% include ad1.html %}
+      {% include ads/ad1.html %}
     </div>
 
-    {% include footer.html %}
-    {% include script-foot.html %}
+    {% include boiler/footer.html %}
+    {% include boiler/script-foot.html %}
   </body>
 
 </html>
