@@ -1,6 +1,9 @@
 // BidVertiser variables
 var dec_pid = 719128;
 var dec_bid = 1784823;
+// infolinks variables
+var infolinks_pid = 2727670;
+var infolinks_wsid = 0;
 
 // 5 sec timout inserts ads after pageload for google results
 (function () {
@@ -10,91 +13,53 @@ var dec_bid = 1784823;
 //     href: '/css/main.css'
 //   }));
 
-// constructor for ad infos
-  var AdData = function(url, element, bool) {
-    this.url = url;
-    this.element = element;
-    if (bool) {
-      this.noGet = bool;
-    }
-  }
-
-// dirty dirty
-  renderAd = function(binder) {
-    if (!binder) {
-      var binder = this;
-    }
-// heheehehehe
-    document.write = function(adContent) {
-      binder.element.append(adContent);
-    }
-
-    document.writeIn = function(adContent) {
-      binder.element.append(adContent);
-    }
-
-    if (!binder.noGet) {
-      binder.element.append($(document.createElement('script')).attr({
-        type: 'text/javascript',
-        src: binder.url
-      }));
-    } else {
-      $.getScript(binder.url);
-    }
-  }
-
-// bidvert nonsense placeholder loader
-  $('.bidvert-square1').append($(document.createElement('script')).attr({
-    type: "text/javascript",
-    src: "http://cdn.bidvertiser.com/bdvinj.js?pid=719128&bid=1784823",
-  }));
-
-  var bidvertRuntime1 = new AdData(
-      'http://cdn.bidvertiser.com/bdvinj.js?pid=719128&bid=1784827',
-      $('.bidvert-square1')
-  );
-
-  $('.bidvert-square2').append($(document.createElement('script')).attr({
-    type: "text/javascript",
-    src: "http://cdn.bidvertiser.com/bdvinj.js?pid=719128&bid=1784827",
-  }));
-
-  var bidvertRuntime2 = new AdData(
-      'http://cdn.bidvertiser.com/bdvinj.js?pid=719128&bid=1784823',
-      $('.bidvert-square2')
-  );
-// yllix script
-  var yllixSquarePop = new AdData(
-    'http://yx-ads6.com/layer.php?section=General&pub=532544&ga=g&show=1&fp',
-    $('.ad-place2')
-  );
-
-
 // rev hits scripts
-  var revhitsSquare1 = new AdData(
-    '//clksite.com/adServe/banners?tid=113089_215589_0',
-    $('.revhits-square1')
-  )
+  var revhitsSquare1 = $(document.createElement('script')).attr({
+    src: '//clksite.com/adServe/banners?tid=113089_215589_0',
+    type: 'text/javascript'
+  })
+  $('.revhits-square1').append(revhitsSquare1);
 
-  var revhitsSquare2 = new AdData(
-    '//clksite.com/adServe/banners?tid=113089_215589_1',
-    $('.revhits-square2')
-  )
+  var revhitsSquare2 = $(document.createElement('script')).attr({
+    src: '//clksite.com/adServe/banners?tid=113089_215589_1',
+    type: 'text/javascript'
+  })
+  $('.revhits-square2').append(revhitsSquare2);
+
+  var revhitsSquare3 = $(document.createElement('script')).attr({
+    src: '//clksite.com/adServe/banners?tid=113089_215589_4',
+    type: 'text/javascript'
+  })
+  $('.revhits-square3').append(revhitsSquare3);
+
+  var revhitsSquare4 = $(document.createElement('script')).attr({
+    src: '//clksite.com/adServe/banners?tid=113089_215589_5',
+    type: 'text/javascript'
+  })
+  $('.revhits-square4').append(revhitsSquare4);
+
+  var revhitsFoot = $(document.createElement('script')).attr({
+    src: '//clksite.com/adServe/banners?tid=113089_215589_2&type=footer&size=728x90',
+    type: 'text/javascript'
+  })
+  $('body').append(revhitsFoot);
+
+  var revhitsShadowBox = $(document.createElement('script')).attr({
+    src: '//clksite.com/adServe/banners?tid=113089_215589_3&type=shadowbox&size=300x250',
+    type: 'text/javascript'
+
+  })
+  $('body').append(revhitsShadowBox);
 
 
-// puts scripts where they go
-  var blockAdList = [];
-  blockAdList.push(
-    yllixSquarePop,
-    bidvertRuntime1,
-    revhitsSquare1,
-    revhitsSquare2,
-    bidvertRuntime2
-  );
+// non square ads
+// infolinks
+  var infolinks = $(document.createElement('script')).attr({
+    src: '//resources.infolinks.com/js/infolinks_main.js',
+    type: 'text/javascript'
+  })
+  $('body').append(infolinks);
 
-  for (var i = 0; i < blockAdList.length; i++) {
-    renderAd(blockAdList[i]);
-  }
 
 // viglinks
   var vglnk = { key: '9c1c9c3af2b6bbade7ed3a0281ffae18' };

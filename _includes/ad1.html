@@ -1,6 +1,13 @@
-<div class="adwrap wrapper ad-place1">
-  <div class="ad bidvert-square1"></div>
-  <div class="ad bidvert-square2"></div>
+<div class="adwrap wrapper">
   <div class="ad revhits-square1"></div>
   <div class="ad revhits-square2"></div>
+</div>
+
+{% if page.url != '/' and page.url != '/kos/' %}
+  {% include comments.html %}
+{% endif %}
+
+<div class="adwrap wrapper">
+  <div class="ad revhits-square3"></div>
+  <div class="ad revhits-square4"></div>
 </div>
