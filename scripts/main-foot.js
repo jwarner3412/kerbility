@@ -2,13 +2,33 @@
 var dec_pid = 719128;
 var dec_bid = 1784823;
 
-// inserts ads after pageload for google results
+// facebook init
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1748071388763685',
+    xfbml      : true,
+    version    : 'v2.6'
+  });
+};
+
+
+// 2.5 sec timeout for fb load
+$(setTimeout((function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk')), 2500));
+
+
+// 5 sec timout inserts ads after pageload for google results
 $(setTimeout(function () {
-// inserts ad css and any other non crucial stuff i can move
-  $('head').append($(document.createElement('link')).attr({
-    rel: 'stylesheet',
-    href: '/css/main.css'
-  }));
+// // inserts ad css and any other non crucial stuff i can move
+//   $('head').append($(document.createElement('link')).attr({
+//     rel: 'stylesheet',
+//     href: '/css/main.css'
+//   }));
 
 
 // constructor for ad infos
