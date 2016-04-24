@@ -2,22 +2,6 @@
 var dec_pid = 719128;
 var dec_bid = 1784823;
 
-// google analytics
-(function(i, s, o, g, r, a, m) {
-  i['GoogleAnalyticsObject'] = r;
-  i[r] = i[r] || function() {
-    (i[r].q = i[r].q || []).push(arguments);
-  }, i[r].l = 1 * new Date();
-  a = s.createElement(o),
-  m = s.getElementsByTagName(o)[0];
-  a.async = 1;
-  a.src = g;
-  m.parentNode.insertBefore(a, m);
-})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-ga('create', 'UA-76237224-1', 'auto');
-ga('send', 'pageview');
-
-
 // 5 sec timout inserts ads after pageload for google results
 $(setTimeout(function () {
 // // inserts ad css and any other non crucial stuff i can move
@@ -137,4 +121,19 @@ $(setTimeout(function () {
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   })(document, 'script', 'facebook-jssdk');
+
+  // google analytics
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments);
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-76237224-1', 'auto');
+  ga('send', 'pageview');
 }, 5000));
