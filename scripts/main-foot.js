@@ -2,6 +2,22 @@
 var dec_pid = 719128;
 var dec_bid = 1784823;
 
+// google analytics
+(function(i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r;
+  i[r] = i[r] || function() {
+    (i[r].q = i[r].q || []).push(arguments);
+  }, i[r].l = 1 * new Date();
+  a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0];
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m);
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-76237224-1', 'auto');
+ga('send', 'pageview');
+
+
 // 5 sec timout inserts ads after pageload for google results
 $(setTimeout(function () {
 // // inserts ad css and any other non crucial stuff i can move
@@ -96,28 +112,6 @@ $(setTimeout(function () {
     renderAd(blockAdList[i]);
   }
 
-// yllix iframes
-  // $('.yllix-square').append($(document.createElement('iframe')).attr({
-  //   src: "http://yx-ads6.com/banner_show.php?section=General&amp;pub=532544&amp;format=300x250&amp;ga=g",
-  //   frameborder: "0",
-  //   scrolling: "no",
-  //   width: "300",
-  //   height: "250",
-  //   marginwidth: "0",
-  //   marginheight: "0"
-  // }));
-  //
-  // $('.yllix-mobile').append($(document.createElement('iframe')).attr({
-  //   src: "http://yx-ads6.com/banner_show.php?section=General&amp;pub=532544&amp;format=300x50&amp;ga=g",
-  //   frameborder:"0",
-  //   scrolling: "no",
-  //   width: "100%",
-  //   height: "50",
-  //   marginwidth: "0",
-  //   marginheight: "0"
-  // }));
-
-
 // viglinks
   var vglnk = { key: '9c1c9c3af2b6bbade7ed3a0281ffae18' };
   (function(d, t) {
@@ -125,22 +119,6 @@ $(setTimeout(function () {
     s.src = '//cdn.viglink.com/api/vglnk.js';
     var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
   }(document, 'script'));
-
-
-// google analytics
-  (function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-      (i[r].q = i[r].q || []).push(arguments);
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-    m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m);
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  ga('create', 'UA-76237224-1', 'auto');
-  ga('send', 'pageview');
 
   // facebook init
   window.fbAsyncInit = function() {
