@@ -13,52 +13,24 @@ var infolinks_wsid = 0;
 //     href: '/css/main.css'
 //   }));
 
-// rev hits scripts
-  var revhitsSquare1 = $(document.createElement('script')).attr({
-    src: '//clksite.com/adServe/banners?tid=113089_215589_0',
-    type: 'text/javascript'
-  })
-  $('.revhits-square1').append(revhitsSquare1);
+// select is the jquery selector where the ad goes, url is script src
+  var adList = [
+    {select: '.revhits-square1', url: '//clksite.com/adServe/banners?tid=113089_215589_0'},
+    {select: '.revhits-square2', url: '//clksite.com/adServe/banners?tid=113089_215589_1'},
+    {select: '.revhits-square3', url: '//clksite.com/adServe/banners?tid=113089_215589_4'},
+    {select: '.revhits-square4', url: '//clksite.com/adServe/banners?tid=113089_215589_5'},
+    {select: 'body', url: '//resources.infolinks.com/js/infolinks_main.js',},
+    {select: 'body', url: '//clksite.com/adServe/banners?tid=113089_215589_2&type=footer&size=728x90',},
+    {select: 'body', url: '//clksite.com/adServe/banners?tid=113089_215589_3&type=shadowbox&size=300x250'}
+  ];
 
-  var revhitsSquare2 = $(document.createElement('script')).attr({
-    src: '//clksite.com/adServe/banners?tid=113089_215589_1',
-    type: 'text/javascript'
-  })
-  $('.revhits-square2').append(revhitsSquare2);
+  function adInject(obj) {
+    $(obj.select).append($(document.createElement('script'))
+      .attr({src: obj.url, type: 'text/javascript'})
+    )
+  }
 
-  var revhitsSquare3 = $(document.createElement('script')).attr({
-    src: '//clksite.com/adServe/banners?tid=113089_215589_4',
-    type: 'text/javascript'
-  })
-  $('.revhits-square3').append(revhitsSquare3);
-
-  var revhitsSquare4 = $(document.createElement('script')).attr({
-    src: '//clksite.com/adServe/banners?tid=113089_215589_5',
-    type: 'text/javascript'
-  })
-  $('.revhits-square4').append(revhitsSquare4);
-
-  var revhitsFoot = $(document.createElement('script')).attr({
-    src: '//clksite.com/adServe/banners?tid=113089_215589_2&type=footer&size=728x90',
-    type: 'text/javascript'
-  })
-  $('body').append(revhitsFoot);
-
-  var revhitsShadowBox = $(document.createElement('script')).attr({
-    src: '//clksite.com/adServe/banners?tid=113089_215589_3&type=shadowbox&size=300x250',
-    type: 'text/javascript'
-
-  })
-  $('body').append(revhitsShadowBox);
-
-
-// non square ads
-// infolinks
-  var infolinks = $(document.createElement('script')).attr({
-    src: '//resources.infolinks.com/js/infolinks_main.js',
-    type: 'text/javascript'
-  })
-  $('body').append(infolinks);
+  adList.forEach(adInject);
 
 
 // viglinks
