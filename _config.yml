@@ -12,8 +12,8 @@ email: admin@kerbility.com
 description: > # this means to ignore newlines until "baseurl:"
   An assortment of KSP calculation tools and usefull things including satellite
   network calculator, and some kerboscript snippits.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://kerbility.com" # the base hostname & protocol for your site
+baseurl: "/kerbility" # the subpath of your site, e.g. /blog
+url: "http://jwarner3412.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
