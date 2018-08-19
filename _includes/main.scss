@@ -1,5 +1,5 @@
 @charset "utf-8";
-$baseurl: "{{ site.baseurl }}"
+$baseurl: "{{ site.baseurl }}";
 @import
         "bourbon/bourbon",
         "base/base",
