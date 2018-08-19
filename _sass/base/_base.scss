@@ -2,6 +2,7 @@
 // http://bitters.bourbon.io
 // Copyright 2013-2015 thoughtbot, inc.
 // MIT License
+$baseurl:"{{ site.baseurl }}";
 
 @import "normalize";
 
@@ -26,5 +27,3 @@
 
 // syntax highlighting
 @import "syntax-highlighting";
-
-$baseurl:"{{ site.baseurl }}";
