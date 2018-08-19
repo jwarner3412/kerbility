@@ -8,7 +8,7 @@
 # Site settings
 title: "Kerbility"
 tagline: "not for your resume"
-email: admin@kerbility.com
+email: jwarner3412@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   An assortment of KSP calculation tools and usefull things including satellite
   network calculator, and some kerboscript snippits.
@@ -20,3 +20,7 @@ markdown: kramdown
 
 sass:
     style: compressed
+
+github_username: jwarner3412
+
+twitter_username: jwarner87
